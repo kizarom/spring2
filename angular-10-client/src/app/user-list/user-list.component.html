@@ -1,0 +1,34 @@
+<div *ngIf="content=='Forbidden'" class="container">
+    <header class="jumbotron">
+      <p>{{ content }}</p>
+    </header>
+  </div>  
+<div *ngIf="content!='Forbidden'">
+<h2> User List</h2>
+<div>
+    <label for="search" class="col-sm-2 col-form-label" style="text-align: right;">search</label>
+    <div class="col-sm-6">
+       <input type="text" [(ngModel)]="searchValue" class="form-control" id="search"/>
+    </div>
+</div>
+  <table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> UserName</th>
+            <th> Email </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users | searchfilter:searchValue" [hidden]="user.roles[0].name!='ROLE_USER'" >
+            <td> {{ user.username }} </td>
+            <td> {{ user.email }} </td>
+            <td>
+            <!--  <button (click) = "updateUser(user.id)" class = "btn btn-info"> Update</button>-->
+                <button (click) = "deleteUser(user.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "userDetails(user.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
