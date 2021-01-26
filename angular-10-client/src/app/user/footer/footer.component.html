@@ -1,0 +1,121 @@
+<footer id="myFooter">
+    <div class="block-advice">
+        <div class="advice-holder">             
+            <p>Subscribe to our newsletter ...</p>
+        </div>
+        <form action="#" class="form-inline" method="post" name="infolettre" id="infolettre" novalidate>
+            <div id="server-message" style="width: 80%;"></div>
+               <div class="form-group" style="width: 80%;">
+                 <div class="input-group">
+                    <span class="input-group-addon">@</span> 
+                        <input name="email" class="form-control" type="email" placeholder="Enter your email address"
+                                    size="36" data-parsley-errors-container="#error-container" required> 
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default" type="button" style="background-color: #eee;">Submit</button>                                   
+                    </span>
+                </div>
+            </div>
+            <div id="error-container" class="errorBlock"></div>
+        </form>
+    </div>
+    <div class="block-advice2">
+        <div class="row">
+            <div class="col-sm-3 myCols">
+                <h5>ACMDH</h5>
+                <ul>
+                    <li><a routerLink="/home">Home</a></li>
+                    <li><a routerLink="/about">About</a></li>
+                    <li><a routerLink="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 myCols">
+                <h5>Projects</h5>
+                <ul>
+                    <li><a routerLink="/done">Achievements</a></li>
+                    <li><a routerLink="/event">Events</a></li>
+                     <li><a routerLink="/gallery">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 myCols">
+                <h5>Act</h5>
+                <ul>                    
+                    <li><a routerLink="/donate">Donate</a></li>
+                    <li><a routerLink="/become-member">Become member</a></li>                                           
+                </ul>
+            </div>
+            <div class="col-sm-3 myCols">
+                <h5>Social Media</h5>
+                <ul>
+                    <li><a href="https://www.facebook.com/ACMDH" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/ACMDH" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.youtube.com/user/theACMDH" target="_blank">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-networks">
+        <a href="https://twitter.com/ACMDH" target="_blank"> <img
+                alt="Visit ACMDH on Facebook" class="attachment-full"
+                src="http://acmdh.org/resource/images/icones/circle_Twitter-small.png">
+                        </a>
+        <a href="https://www.facebook.com/ACMDH" target="_blank"> <img 
+                alt="Follow ACMDH on Twitter" class="attachment-full"
+                src="http://acmdh.org/resource/images/icones/circle_Facebook-small.png">
+                        </a>
+        <a href="https://www.youtube.com/user/theACMDH" target="_blank"> <img
+                alt="Visit the ACMDH Youtube Channel" class="attachment-full"
+                src="http://acmdh.org/resource/images/icones/circle_Youtube-small.png">
+                        </a>
+    </div>
+    <div class="footer-copyright">
+        <p>2018 Moroccan-Canadian Association for human development. All rights reserved.</p>
+    </div>    
+</footer>
+<div class="modal fade" id="pleaseWaitDialog" tabindex="-1" role="dialog" data-keyboard="false"
+         data-backdrop="static">
+      <div class="modal-dialog" style="margin-top:10%;">
+        <div class="modal-content" style="box-shadow:none;border:none;background-color:transparent; ">
+          <div class="modal-body">
+            <div style="height:200px">
+                <span id="spinner-img" style="position: absolute;display: block;top: 50%;left: 50%;"></span>
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- video - modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 id="video-title" class="modal-title"></h4>
+          </div>
+          <div class="modal-body">
+            <div id="video-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://acmdh.org/resource/js/jquery.min.js"></script>
+    <script src="http://acmdh.org/resource/js/bootstrap.min.js"></script>
+    <script src="http://acmdh.org/resource/js/parsley.min.js"></script>
+    <script src="http://acmdh.org/resource/js/i18n/en.js"></script>
+    <script src="http://acmdh.org/resource/js/spin.min.js"></script>
+    <script src="http://acmdh.org/resource/js/lodash.min.js"></script>
+    <script src="http://acmdh.org/resource/js/acmdh-common.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $.fn.scrollView = function () {
+            return this.each(function () {
+                $('html, body').animate({
+                    scrollTop: $(this).offset().top
+                }, 1000);
+            });
+        }
+        commonModule.init();
+        commonModule.addFormSubmitEvent('infolettre', 'server-message','/newslettre');
+      });
+          </script>

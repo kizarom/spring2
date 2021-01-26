@@ -1,0 +1,25 @@
+<h2> Facture List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Description</th>
+            <th> Date </th>
+            <th>date reception</th>
+            <th>montant</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let facture of factures" >
+            <td> {{ facture.description }} </td>
+            <td> {{ facture.date_em }} </td>
+            <td> {{ facture.date_rec }} </td>
+            <td> {{ facture.montant }} </td>
+            <td>
+                <button (click) = "updateFacture(facture.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteFacture(facture.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "FactureDetails(facture.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

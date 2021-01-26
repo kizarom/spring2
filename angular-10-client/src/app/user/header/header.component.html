@@ -1,0 +1,90 @@
+<header>
+    <div class="container-fluid">
+        <div class="row" style="padding:inherit;">
+            <div class="banner jarallax">
+                <div class="w3layouts-header-top">
+                    <div class="container">
+                        <div class="w3-header-top-grids">
+                            <div class="logo">
+                                <a href="#"> <img class="logo-img"
+                                    src="http://acmdh.org/resource/images/acmdh-logo-bottom.png" alt="ACMDH logo" /></a> 
+                            </div>             
+                            <div class="sandbox sandbox-correct-pronounciation">
+                                <h1 class="heading heading-correct-pronounciation">           
+                                <em>ACMDH</em>
+                                Association Canado-Marocaine<br>pour le Développement Humain
+                                </h1>
+                            </div>
+
+                            <div class="w3-header-top-right">                            
+                                <div class="social-small small-top-menu">
+                                    <ul>
+                                        <li><a href="/donate" class="Paypal_sec"> <img src="http://acmdh.org/resource/images/icones/if_paypal_mini.png" 
+                                               alt="PayPal" /></a></li>
+                                        <li><a href="https://www.facebook.com/ACMDH" target="_blank"> <img 
+                                                alt="Follow ACMDH on Twitter" class="attachment-full"
+                                                src="http://acmdh.org/resource/images/icones/Facebook-small.png">
+                                        </a></li>
+                                        <li><a href="https://twitter.com/ACMDH" target="_blank"> <img
+                                                alt="Visit ACMDH on Facebook" class="attachment-full"
+                                                src="http://acmdh.org/resource/images/icones/Twitter-small.png">
+                                        </a></li>
+                                        <li><a href="https://www.youtube.com/user/theACMDH" target="_blank"> <img
+                                                alt="Visit the ACMDH Youtube Channel" class="attachment-full"
+                                                src="http://acmdh.org/resource/images/icones/Youtube-small.png">
+                                        </a></li>
+                                             <li><span onclick="document.location.href='http://acmdh.org/language?locale=en';">ENG
+                                        </span> </li>
+                                    </ul>
+                                </div>                                                               
+                            </div>                             
+                        </div>
+                    </div>                    
+
+                    <div class="container">                                                 
+                        <div class="navbar-top">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>                                    
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav link-effect-4">
+                                    <li routerLinkActive="active"><a routerLink="home">Accueil</a></li>
+                                    <li routerLinkActive="active"><a routerLink="/about">A propos</a></li>
+                                    <li routerLinkActive="active"><a routerLink="/done">Réalisations</a></li>
+                                    <li routerLinkActive="active"><a routerLink="/event">Événements</a></li>
+                                    <li routerLinkActive="active"><a routerLink="/gallery">Galerie</a></li>
+                                    <li routerLinkActive="active"><a routerLink="/contact">Contact</a></li>
+                                    <li class="nav-item dropdown" *ngIf="showAdminBoard">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                          <i style="font-size: 18px;" class="fa fa-cog" aria-hidden="true"></i>setting <span class="sr-only">(current)</span>
+                                        </a>
+                                        <div class="dropdown-menu" bis_skin_checked="1" x-placement="bottom-start" style="position: absolute;background-color: royalblue; transform: translate3d(0px, 37px, 0px); top: 0px; left: 0px;will-change: transform;color: black;">
+                                          <a routerLink="/admin/users" class="dropdown-item" routerLinkActive="active">
+                                            <i class="fa fa-user" aria-hidden="true"></i> users
+                                            <span class="sr-only">(current)</span>
+                                          </a>
+                                          <a routerLink="/admin/membres" class="dropdown-item" routerLinkActive="active">
+                                            <i class="fa fa-users" aria-hidden="true"></i> membres
+                                            <span class="sr-only">(current)</span>
+                                          </a>
+                                          <a routerLink="/admin/factures" class="dropdown-item" routerLinkActive="active">
+                                            <i  class="fa fa-cart-arrow-down" aria-hidden="true"></i> factures
+                                            <span class="sr-only">(current)</span>
+                                          </a>                                         
+                                        </div>
+                                    </li>    
+                                    <li routerLinkActive="active" *ngIf="isLoggedIn"><a (click)="logout()">LogOut</a></li>                             
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </div>   
+</header>

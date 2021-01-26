@@ -1,0 +1,31 @@
+  <h2> Membre List</h2>
+  <table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> NOM</th>
+            <th> PRENOM</th>
+            <th> EMAIL </th>
+            <th> ADRESSE1</th>
+            <th> ADRESSE2</th>
+            <th> TEL</th>
+            <th> CATEGORIE  </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let membre of membres" >
+            <td> {{ membre.nom }} </td>
+            <td> {{ membre.prenom }} </td>
+            <td> {{ membre.email }} </td>
+            <td> {{membre.adresse1 }} </td>
+            <td> {{ membre.adresse2}} </td>
+            <td> {{ membre.tel }} </td>
+            <td> {{ membre.categorie }} </td>
+            <td>
+            <!--  <button (click) = "updateUser(user.id)" class = "btn btn-info"> Update</button>-->
+                <button (click) = "deleteMembre(membre.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "MembreDetails(membre.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

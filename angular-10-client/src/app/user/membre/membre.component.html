@@ -1,0 +1,199 @@
+<div class="page-content">
+	<h1>    Devenir membre
+</h1>
+	<div class="row">
+		<div class="col-md-8">
+				<div class="row">
+		<div class="form-group col-md-12">
+			<p>
+				L'Association canadienne-marocaine pour le développement humain (ACMDH) a été établie avec le grand effort
+	                 de ses membres actuels. Ceux qui souhaitent contribuer à cet effort sont les bienvenus pour devenir membre.
+					 En devenant membre d'ACMDH, vous soutenez ses programmes et vous l'aidez à réaliser sa mission.
+					 Vous aurez l'occasion d'améliorer la vie des Marocains dans le plus grand besoin.
+					 ACMDH ne peut pas atteindre ses objectifs sans l'effort et le soutien de ses membres.
+					 Nous vous invitons à devenir un ambassadeur pour l'Association et en faire la promotion auprès de vos contacts personnels.
+			</p>
+			<p>
+				De nombreux défis restent à relever pour l'année à venir.
+	                 Vos contributions nous aideront à atteindre nos objectifs.<br/>
+				Les frais d'adhésion pour l'année en cours sont:
+				<ul>
+					<li>Frais abonnement régulier: $60</li>
+					<li>Frais abonnement étudiant: $40</li>
+				</ul>
+		</div>
+	</div>
+	<fieldset>
+		<legend>Informations détaillées</legend>
+		<form role="form" action="#" method="post" name="new-member" id="new-member" novalidate>
+			<div class="form-group">
+				<div id="member-server-message" class="errorBlock"></div>
+			</div>
+			<div  class="row">
+				<div class="form-group col-md-6">
+					<label for="firstname">Prénom</label> 
+					<input class="form-control" name="firstname" placeholder="Entrer votre prénom" required>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="lastname">Nom</label> 
+					<input class="form-control" name="lastname" placeholder="Entrer votre nom" required>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="adress1">Addresse Ligne 1</label> 
+					<input class="form-control" name="adress1" placeholder="Entrer addresse Ligne 1" required>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="adress2">Addresse Ligne 2</label> 
+					<input class="form-control" name="adress2" placeholder="Entrer addresse Ligne 2">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="province">Province</label> 
+					<input class="form-control" name="province" placeholder="Entrer votre province">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="city">Ville</label> 
+					<input class="form-control" name="city" placeholder="Entrer votre ville" required>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="postal_code">Code postal</label> 
+					<input class="form-control" name="postal_code" placeholder="Entrer votre code postal">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="country">Pays</label> 
+					<input class="form-control" name="country" placeholder="Entrer votre pays" required>
+				</div>
+				<div class="form-group col-md-6">
+				    <label for="email">Adresse courriel</label>
+				    <input type="email" class="form-control" name="email" placeholder="Entrer votre adresse courriel" required>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="phone">Téléphone</label> 
+					<input class="form-control" name="phone" placeholder="Entrer votre téléphone" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-md-6">
+					<label for="member_cat">Categorie du membre</label> 
+					&nbsp;<span style="cursor:pointer;" class="glyphicon glyphicon-question-sign" 
+					aria-hidden="true"  data-container="body" data-toggle="popover" 
+					data-placement="right" data-html="true"
+					data-content="<div>There are two member categories:<ul><li>Regular Member and the adhesion per year is 60 $</li><li>Student Member and the adhesion per year is 40 $</li></ul></div>"></span>
+					<p>
+				  		<input type="radio" name="member_cat" value="R" required> Régulier						
+						<br>
+						<input type="radio" name="member_cat" value="S"> Étudiant
+					</p>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="payment_mode">Mode Paiement</label>
+					&nbsp;<span style="cursor:pointer;" class="glyphicon glyphicon-question-sign" aria-hidden="true"  data-html="true" data-container="body" data-toggle="popover" data-placement="right" data-content="<div>those are the payment modes to pay the annual adhesion.</div>"></span>
+					<p>
+						<input type="radio" name="payment_mode" value="PP" required> En ligne via PayPal.
+						<br>
+						<input type="radio" name="payment_mode" value="DD"> Virement bancaire
+						<br>
+						<input type="radio" name="payment_mode" value="CA"> Cheque, Espece ou Mandat						
+					</p>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="pref_lang">Langue Préferée</label> 
+					<p>
+						<input type="radio" name="pref_lang" value="EN" required> Anglais
+						<br>
+						<input type="radio" name="pref_lang" value="FR"> Français
+					</p>
+				</div>
+				<div class="form-group col-md-12">
+					<div class="checkbox">
+					  <label><input type="checkbox" name="mail_list">  Je suis d'accord pour rejoindre la liste de diffusion d'ACMDH.</label>
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Soumettre</button>
+		</form>
+	</fieldset>
+	<div id="cachePostSuccessContent" style="display: none">
+		Welcome to ACMDH.<br>
+	  	Veuillez libeller votre chèque ou mondat à l'ordre de : "ACMDH" et faites-le parvenir à :<br>
+	    xxxxxxxxxxxxxxxx<br> 
+		xxxxxxxxxxxxxxxxxx<br> 
+		Canada<br>
+		Aussi, vous pouvez appeler sur le numero: 514-333-2659<br>
+		Thank you.
+  	</div>
+		</div>
+		<div class="col-md-4">
+		    <div class="panel panel-default">
+			  <div class="panel-heading gradient-blue-3D">
+			    <h3 class="panel-title"><span class="glyphicon glyphicon-heart"></span> Faire un don</h3>
+			  </div>
+			  <div class="panel-body">
+			    <p>
+			    	Il y a trois façons d'éffectuer un don à l'Association ACMDH:
+			    	<ol>
+			    		<li>Don en ligne via PayPal</li>
+			    		<li>Virement bancaire</li>
+			    		<li>Chèque, Espèce ou Mandat</li>
+			    	</ol>
+			    	Pour avoir plus d'information merci de consulter la page  <a href="/donate">Faire un don</a>
+			  </div>
+			</div>
+			<div class="panel panel-default">
+			  <div class="panel-heading gradient-blue-3D">
+			    <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> Devenir membre</h3>
+			  </div>
+			  <div class="panel-body">
+			    <p>
+			    	ACMDH a été établie avec le grand effort de ses membres actuels. Ceux qui souhaitent contribuer à cet effort sont les bienvenus pour  <a href="/become-member">Devenir membre</a>
+			    </p>
+			  </div>
+			</div>
+		    <div class="panel panel-default">
+		    	<div class="panel-heading gradient-blue-3D">
+			    	<h3 class="panel-title"><span class="glyphicon glyphicon-thumbs-up"></span> Click <span class="label label-default">J'aime</span> et <span class="label label-default">Partage</span> Sur Facebook</h3>
+			  	</div>
+			    <div class="panel-body" style="text-align: center;">
+			      <iframe width="95%" height="95%" frameborder="0" name="f3b28c84f20fbc6" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like_box Facebook Social Plugin" style="border: medium none; visibility: visible; width: 320px; height: 307px;" src="http://www.facebook.com/plugins/like_box.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FNM7BtzAR8RM.js%3Fversion%3D41%23cb%3Df55184caea9bee%26domain%3Dacmdh.com%26origin%3Dhttp%253A%252F%252Facmdh.com%252Ff1d716ed172c19c%26relation%3Dparent.parent&amp;container_width=320&amp;header=true&amp;height=307&amp;href=http%3A%2F%2Fwww.facebook.com%2Facmdh&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=320" class=""></iframe>
+			    </div>
+		    </div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+    $(function() {
+      $.fn.scrollView = function () {
+          return this.each(function () {
+              $('html, body').animate({
+                  scrollTop: $(this).offset().top
+              }, 1000);
+          });
+      }
+      commonModule.init();
+      commonModule.addFormSubmitEvent('infolettre', 'server-message','/newslettre');
+    });
+        $(function() {
+      function afterSuccessPost(){
+          var paymentMode = $('[name=payment_mode]:checked').val();
+          var message;
+          if (paymentMode === 'PP') {
+              message = 'Welcome to ACMDH.<br>A PayPal window is opened where you can pay your annual adhesion.<br>Thank you. ';
+              var memberCat = $('[name=member_cat]:checked').val();
+              if (memberCat === 'S') {
+                  window.open("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V97NTJKKPAF6J");
+              } else {
+                  window.open("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KU5HEZU6ASKEC");
+              }
+          }
+          if (paymentMode === 'DD') {
+              message = 'Welcome to ACMDH.<br>The full account number that you can use for your transfer to pay your annual adhesion is <span class="label label-default">00931 010 23 05917</span>.<br>Thank you. ';
+          }
+          if (paymentMode === 'CA') {
+              message = $('#cachePostSuccessContent').html();
+          }
+          $('#member-server-message > .alert-success').replaceWith( '<div class="alert alert-success" role="alert">'+message+'</div>' );
+      }
+      $('[data-toggle="popover"]').popover();
+      commonModule.addFormSubmitEvent('new-member', 'member-server-message','/member', afterSuccessPost);
+      
+});
+  </script>
