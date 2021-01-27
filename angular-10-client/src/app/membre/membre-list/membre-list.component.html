@@ -1,6 +1,6 @@
-  <h2> Membre List</h2>
-  <table class = "table table-striped">
-    <thead>
+  <h2 style="text-align: center;"> Membre List</h2>
+  <table class="table table-bordered">
+    <thead class="thead-dark">
         <tr>
             <th> NOM</th>
             <th> PRENOM</th>
@@ -13,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor = "let membre of membres" >
+        <tr *ngFor = "let membre of membres" [hidden]="membre.status!='actif'" >
             <td> {{ membre.nom }} </td>
             <td> {{ membre.prenom }} </td>
             <td> {{ membre.email }} </td>
@@ -23,8 +23,10 @@
             <td> {{ membre.categorie }} </td>
             <td>
             <!--  <button (click) = "updateUser(user.id)" class = "btn btn-info"> Update</button>-->
-                <button (click) = "deleteMembre(membre.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                <button (click) = "MembreDetails(membre.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            <button (click) = "deleteMembre(membre.id)" class = "btn btn-danger" style="margin-left: 10px"> <i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button (click) = "MembreDetails(membre.id)" class = "btn btn-info" style="margin-left: 10px"> <i class="fa fa-eye" aria-hidden="true"></i></button>
+            <!-- <button (click) = "saves(membre.id)"  style="margin-left: 10px" class = "btn btn-info">accepter</button> -->
+
             </td>
         </tr>
     </tbody>

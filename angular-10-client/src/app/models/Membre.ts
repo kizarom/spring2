@@ -13,4 +13,5 @@ export class Membre {
     modepayement: string;
     langue: string;
     email: string;
+    status?:string;
 }

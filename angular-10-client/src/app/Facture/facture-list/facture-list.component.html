@@ -1,5 +1,5 @@
-<h2> Facture List</h2>
-<table class = "table table-striped">
+<h2 style="text-align: center;"> Facture List</h2>
+<table class="table table-bordered">
     <thead>
         <tr>
             <th> Description</th>
@@ -16,9 +16,9 @@
             <td> {{ facture.date_rec }} </td>
             <td> {{ facture.montant }} </td>
             <td>
-                <button (click) = "updateFacture(facture.id)" class = "btn btn-info"> Update</button>
-                <button (click) = "deleteFacture(facture.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                <button (click) = "FactureDetails(facture.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+                <button (click) = "updateFacture(facture.id)" class = "btn btn-info"> <i class="fa fa-pencil" aria-hidden="true"></i></button>
+                <button (click) = "deleteFacture(facture.id)" class = "btn btn-danger" style="margin-left: 10px"> <i class="fa fa-trash" aria-hidden="true"></i></button>
+                <button (click) = "FactureDetails(facture.id)" class = "btn btn-info" style="margin-left: 10px"> <i class="fa fa-eye" aria-hidden="true"></i></button>
             </td>
         </tr>
     </tbody>

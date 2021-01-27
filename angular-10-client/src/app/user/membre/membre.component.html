@@ -25,50 +25,50 @@
 	</div>
 	<fieldset>
 		<legend>Informations détaillées</legend>
-		<form role="form" action="#" method="post" name="new-member" id="new-member" novalidate>
+		<form  (ngSubmit) = "onSubmit()" role="form" action="#" method="post" name="new-member" id="new-member" novalidate>
 			<div class="form-group">
 				<div id="member-server-message" class="errorBlock"></div>
 			</div>
 			<div  class="row">
 				<div class="form-group col-md-6">
 					<label for="firstname">Prénom</label> 
-					<input class="form-control" name="firstname" placeholder="Entrer votre prénom" required>
+					<input class="form-control" [(ngModel)]="membre.prenom" name="firstname" placeholder="Entrer votre prénom" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="lastname">Nom</label> 
-					<input class="form-control" name="lastname" placeholder="Entrer votre nom" required>
+					<input class="form-control" [(ngModel)]="membre.nom" name="lastname" placeholder="Entrer votre nom" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="adress1">Addresse Ligne 1</label> 
-					<input class="form-control" name="adress1" placeholder="Entrer addresse Ligne 1" required>
+					<input class="form-control" [(ngModel)]="membre.adresse1" name="adress1" placeholder="Entrer addresse Ligne 1" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="adress2">Addresse Ligne 2</label> 
-					<input class="form-control" name="adress2" placeholder="Entrer addresse Ligne 2">
+					<input class="form-control" [(ngModel)]="membre.adresse2" name="adress2" placeholder="Entrer addresse Ligne 2">
 				</div>
 				<div class="form-group col-md-6">
 					<label for="province">Province</label> 
-					<input class="form-control" name="province" placeholder="Entrer votre province">
+					<input class="form-control" [(ngModel)]="membre.province" name="province" placeholder="Entrer votre province">
 				</div>
 				<div class="form-group col-md-6">
 					<label for="city">Ville</label> 
-					<input class="form-control" name="city" placeholder="Entrer votre ville" required>
+					<input class="form-control" name="city" [(ngModel)]="membre.ville" placeholder="Entrer votre ville" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="postal_code">Code postal</label> 
-					<input class="form-control" name="postal_code" placeholder="Entrer votre code postal">
+					<input class="form-control" [(ngModel)]="membre.codepostal" name="postal_code" placeholder="Entrer votre code postal">
 				</div>
 				<div class="form-group col-md-6">
 					<label for="country">Pays</label> 
-					<input class="form-control" name="country" placeholder="Entrer votre pays" required>
+					<input class="form-control" [(ngModel)]="membre.pays" name="country" placeholder="Entrer votre pays" required>
 				</div>
 				<div class="form-group col-md-6">
 				    <label for="email">Adresse courriel</label>
-				    <input type="email" class="form-control" name="email" placeholder="Entrer votre adresse courriel" required>
+				    <input type="email" class="form-control" [(ngModel)]="membre.email" name="email" placeholder="Entrer votre adresse courriel" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="phone">Téléphone</label> 
-					<input class="form-control" name="phone" placeholder="Entrer votre téléphone" required>
+					<input class="form-control" name="phone" [(ngModel)]="membre.tel" placeholder="Entrer votre téléphone" required>
 				</div>
 			</div>
 			<div class="row">
@@ -79,28 +79,28 @@
 					data-placement="right" data-html="true"
 					data-content="<div>There are two member categories:<ul><li>Regular Member and the adhesion per year is 60 $</li><li>Student Member and the adhesion per year is 40 $</li></ul></div>"></span>
 					<p>
-				  		<input type="radio" name="member_cat" value="R" required> Régulier						
+				  		<input type="radio" [(ngModel)]="membre.categorie" name="member_cat" value="R" required> Régulier						
 						<br>
-						<input type="radio" name="member_cat" value="S"> Étudiant
+						<input type="radio" [(ngModel)]="membre.categorie" name="member_cat" value="S"> Étudiant
 					</p>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="payment_mode">Mode Paiement</label>
 					&nbsp;<span style="cursor:pointer;" class="glyphicon glyphicon-question-sign" aria-hidden="true"  data-html="true" data-container="body" data-toggle="popover" data-placement="right" data-content="<div>those are the payment modes to pay the annual adhesion.</div>"></span>
 					<p>
-						<input type="radio" name="payment_mode" value="PP" required> En ligne via PayPal.
+						<input type="radio" [(ngModel)]="membre.modepayement" name="payment_mode" value="PP" required> En ligne via PayPal.
 						<br>
-						<input type="radio" name="payment_mode" value="DD"> Virement bancaire
+						<input type="radio" [(ngModel)]="membre.modepayement" name="payment_mode" value="DD"> Virement bancaire
 						<br>
-						<input type="radio" name="payment_mode" value="CA"> Cheque, Espece ou Mandat						
+						<input type="radio" [(ngModel)]="membre.modepayement" name="payment_mode" value="CA"> Cheque, Espece ou Mandat						
 					</p>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="pref_lang">Langue Préferée</label> 
 					<p>
-						<input type="radio" name="pref_lang" value="EN" required> Anglais
+						<input type="radio" [(ngModel)]="membre.langue" name="pref_lang" value="EN" required> Anglais
 						<br>
-						<input type="radio" name="pref_lang" value="FR"> Français
+						<input type="radio" [(ngModel)]="membre.langue" name="pref_lang" value="FR"> Français
 					</p>
 				</div>
 				<div class="form-group col-md-12">

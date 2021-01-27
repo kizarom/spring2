@@ -11,8 +11,6 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './user/home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
-import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
-import { BoardUserComponent } from './board-user/board-user.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 
@@ -21,9 +19,9 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchfilterPipe } from './searchfilter.pipe';
-import { MembreListComponent } from './membre-list/membre-list.component';
-import { MembreDetailsComponent } from './membre-details/membre-details.component';
-import { UpdateMembreComponent } from './update-membre/update-membre.component';
+import { MembreListComponent } from './membre/membre-list/membre-list.component';
+import { MembreDetailsComponent } from './membre/membre-details/membre-details.component';
+import { UpdateMembreComponent } from './membre/update-membre/update-membre.component';
 import { FactureListComponent } from './Facture/facture-list/facture-list.component';
 import { FactureDetailsComponent } from './Facture/facture-details/facture-details.component';
 import { UpdateFactureComponent } from './Facture/update-facture/update-facture.component';
@@ -37,6 +35,9 @@ import { FooterComponent } from './user/footer/footer.component';
 import { GalleryComponent } from './user/gallery/gallery.component';
 import { HeaderComponent } from './user/header/header.component';
 import { MembreComponent } from './user/membre/membre.component';
+import { AdhesionComponent } from './adhesion/adhesion.component';
+import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { BoardUserComponent } from './board-user/board-user.component';
 
 @NgModule({
   declarations: [
@@ -46,8 +47,6 @@ import { MembreComponent } from './user/membre/membre.component';
     HomeComponent,
     ProfileComponent,
     BoardAdminComponent,
-    BoardModeratorComponent,
-    BoardUserComponent,
     UserListComponent,
     UserDetailsComponent,
     SearchfilterPipe,
@@ -66,7 +65,10 @@ import { MembreComponent } from './user/membre/membre.component';
     FooterComponent,
     GalleryComponent,
     HeaderComponent,
-    MembreComponent
+    MembreComponent,
+    AdhesionComponent,
+    BoardModeratorComponent,
+    BoardUserComponent
   ],
   imports: [
     BrowserModule,

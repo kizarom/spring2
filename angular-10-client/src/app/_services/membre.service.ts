@@ -24,16 +24,14 @@ export class MembreService {
     return this.http.delete(`${this.baseURL}/${id}`);
   }
 
-/*
-  createEmployee(employee: Employee): Observable<Object>{
-    return this.http.post(API_URL, employee);
+  createMembre(membre: Membre): Observable<Object>{
+    return this.http.post(`${this.baseURL}`, membre);
   }
 
-
-
-  updateEmployee(id: number, employee: Employee): Observable<Object>{
-    return this.httpt.put(`${this.baseURL}/${id}`, employee);
+  updateMembre(id: number, membre: Membre): Observable<Object>{
+    return this.http.put(`${this.baseURL}/${id}`, membre);
   }
-*/
-  
+  updateStatus(id:number,membre:Membre){
+    return this.http.post(`${this.baseURL}/status/${id}`,membre);
+  }
 }

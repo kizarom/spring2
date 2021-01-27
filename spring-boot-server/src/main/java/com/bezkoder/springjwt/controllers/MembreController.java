@@ -22,7 +22,7 @@ import com.bezkoder.springjwt.exception.ResourceNotFoundException;
 import com.bezkoder.springjwt.repository.MembreRepository;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
-@PreAuthorize("hasRole('ADMIN')")
+// @PreAuthorize("hasRole('ADMIN')")
 @RestController
 @RequestMapping("/api/test/admin")
 public class MembreController {
@@ -85,6 +85,14 @@ public class MembreController {
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
-	}
+    }
+	@PostMapping("/membres/status/{id}")
+	public ResponseEntity<Membre> updatestatus(@PathVariable Long id) {
+		Membre membre = membreRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("membre not exist with id :" + id));
+        membre.setStatus("actif");
+        membreRepository.save(membre);
+		return ResponseEntity.ok(membre);
+    }
 	
 }

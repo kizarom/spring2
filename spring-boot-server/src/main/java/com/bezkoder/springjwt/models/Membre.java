@@ -65,9 +65,8 @@ public class Membre {
 	@Size(max = 20)
     private String langue;
 
-    @NotBlank
 	@Size(max = 20)
-	private String status;
+	private String status = "passif";
 
     public Membre() {
     }

@@ -21,6 +21,7 @@ export class UserDetailsComponent implements OnInit {
     this.userService.getAdminBoard().subscribe(
       data => {
         this.content = data;
+        this.router.navigate(['admin/users']);
       },
       err => {
         this.content = JSON.parse(err.error).message;
