@@ -1,0 +1,11 @@
+1- https://code.visualstudio.com/docs/java/java-spring-boot (tutoriel)
+
+2- install angular_cli (https://angular.io/guide/setup-local)
+
+3- importer les 2 PROJET FRONT end ET BACK end 
+
+4- pour back end just f5 pour run 
+
+5- front end - npm install (install les modules)
+             
+             - ng serve (run)
